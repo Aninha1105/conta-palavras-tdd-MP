@@ -2,29 +2,21 @@ all: testa_conta_palavras
 
 testa_conta_palavras: testa_conta_palavras.cpp conta_palavras.o
 	g++ -std=c++11 -Wall -ftest-coverage -fprofile-arcs conta_palavras.o testa_conta_palavras.cpp -o testa_conta_palavras
-	./testa_conta_palavras
 
 conta_palavras.o: conta_palavras.cpp conta_palavras.hpp
 	g++ -std=c++11 -Wall -ftest-coverage -fprofile-arcs -c conta_palavras.cpp -o conta_palavras.o
 
-compile: testa_conta_palavras.cpp conta_palavras.o
-	g++ -std=c++11 -Wall conta_palavras.o testa_conta_palavras.cpp -o testa_conta_palavras
-
 test: testa_conta_palavras
 	./testa_conta_palavras
 
-cpplint: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
-	python3 cpplint.py --exclude=catch.hpp *.*
+cpplint:
+	python3 cpplint.py --exclude=catch.hpp conta_palavras.cpp conta_palavras.hpp testa_conta_palavras.cpp
 
-gcov: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp 
-	g++ -std=c++11 -Wall -ftest-coverage -fprofile-arcs -c conta_palavras.cpp -o conta_palavras.o
-	g++ -std=c++11 -Wall -ftest-coverage -fprofile-arcs conta_palavras.o testa_conta_palavras.cpp -o testa_conta_palavras
+gcov: testa_conta_palavras 
 	./testa_conta_palavras
-	gcov conta_palavras.cpp testa_conta_palavras.cpp conta_palavras.hpp
+	gcov conta_palavras.cpp testa_conta_palavras.cpp
 
-debug: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp 
-	g++ -std=c++11 -Wall -g -c conta_palavras.cpp -o conta_palavras.o
-	g++ -std=c++11 -Wall -g conta_palavras.o testa_conta_palavras.cpp -o testa_conta_palavras
+debug: testa_conta_palavras
 	gdb testa_conta_palavras
 
 cppcheck: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
