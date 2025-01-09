@@ -12,5 +12,5 @@
 TEST_CASE("Teste 1: ContaPalavras retorna vazio para texto vazio") {
     std::string texto = "" ;
     auto resultado = ContaPalavras(texto);  
-    REQUIRE (resultado == true) ;
+    REQUIRE (resultado.empty()) ;
 }

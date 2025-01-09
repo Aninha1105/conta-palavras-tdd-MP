@@ -8,7 +8,8 @@
 #define CONTA_PALAVRAS_HPP
 
 #include <string>
+#include <vector>
 
-bool ContaPalavras (const std::string& texto) ;
+std::vector<std::pair<std::string,int>> ContaPalavras (const std::string& texto) ;
 
 #endif  // CONTA_PALAVRAS_HPP
