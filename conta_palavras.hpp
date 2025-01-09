@@ -15,5 +15,6 @@ std::vector<std::pair<std::string, int>>
 ContaPalavras(const std::string& texto);
 void separarEContar(const std::string& texto,
 std::vector<std::pair<std::string, int>>& palavras);
+void lowerCase(const std::string& texto);
 
 #endif  // CONTA_PALAVRAS_HPP_

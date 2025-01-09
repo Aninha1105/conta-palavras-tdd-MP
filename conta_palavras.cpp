@@ -9,6 +9,10 @@
 #include <utility>
 #include <string>
 
+void lowerCase(const std::string& texto){
+  return;
+}
+
 void separarEContar(const std::string& texto,
 std::vector<std::pair<std::string, int>>& palavras) {
   std::string palavra_atual = "";
@@ -50,6 +54,8 @@ std::vector<std::pair<std::string, int>>& palavras) {
 
 std::vector<std::pair<std::string, int>>
 ContaPalavras(const std::string& texto) {
+  lowerCase(texto);
+
   std::vector<std::pair<std::string, int>> palavras;
 
   separarEContar(texto, palavras);
