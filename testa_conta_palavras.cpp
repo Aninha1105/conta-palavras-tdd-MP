@@ -37,3 +37,12 @@ TEST_CASE("Teste 3: Contar corrências de palavras repetidas") {
   REQUIRE(resultado[3].first == "um");
   REQUIRE(resultado[3].second == 2);
 }
+
+TEST_CASE("Teste 4: Converter todas as palavras para lowercase"){
+  std::string texto = "texto TexTO TEXTO";
+  auto resultado = ContaPalavras(texto)  ;
+
+  REQUIRE(resultado.size() == 1);
+  REQUIRE(resultado[0].first == "texto");
+  REQUIRE(resultado[0].second == 3);
+}
