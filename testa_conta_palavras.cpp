@@ -8,6 +8,7 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "conta_palavras.hpp"
+#include <string>
 
 TEST_CASE("Teste 1: ContaPalavras retorna vazio para texto vazio") {
     std::string texto = "";
@@ -16,12 +17,12 @@ TEST_CASE("Teste 1: ContaPalavras retorna vazio para texto vazio") {
     REQUIRE(resultado.empty());
 }
 
-TEST_CASE ("Teste 2: Separação de palavras"){
-  std::string texto = "exemplo de texto"; 
-  auto resultado = ContaPalavras(texto); 
+TEST_CASE("Teste 2: Separação de palavras") {
+  std::string texto = "exemplo de texto";
+  auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 3);
   REQUIRE(resultado[0].first == "exemplo");
   REQUIRE(resultado[1].first == "de");
-  REQUIRE(resultado[2].first == "texto");   
+  REQUIRE(resultado[2].first == "texto");
 }
