@@ -9,8 +9,12 @@
 #include <utility>
 #include <string>
 
-void lowerCase(const std::string& texto){
-  return;
+std::string lowerCase(const std::string& texto){
+  std::string lower_texto = "";
+  for(size_t i = 0; i < texto.size(); i++){
+    lower_texto += tolower(texto[i]);
+  }
+  return lower_texto;
 }
 
 void separarEContar(const std::string& texto,
@@ -54,11 +58,11 @@ std::vector<std::pair<std::string, int>>& palavras) {
 
 std::vector<std::pair<std::string, int>>
 ContaPalavras(const std::string& texto) {
-  lowerCase(texto);
+  std::string lower_texto = lowerCase(texto);
 
   std::vector<std::pair<std::string, int>> palavras;
 
-  separarEContar(texto, palavras);
+  separarEContar(lower_texto, palavras);
 
   return palavras;
 }
