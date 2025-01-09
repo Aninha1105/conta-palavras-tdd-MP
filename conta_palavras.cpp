@@ -8,6 +8,12 @@
 #include <utility>
 #include <string>
 
+void separarEContar(const std::string& texto, std::vector<std::pair<std::string,int>>& palavras){
+ return;
+}
+
 std::vector<std::pair<std::string, int>> ContaPalavras(const std::string& texto) {
+  std::vector<std::pair<std::string,int>> palavras;
+   separarEContar(texto, palavras);
   return {};
 }
