@@ -27,13 +27,13 @@ TEST_CASE("Teste 2: Separação de palavras") {
   REQUIRE(resultado[2].first == "texto");
 }
 
-TEST_CASE("Teste 3: Contar corrências de palavras repetidas"){
+TEST_CASE("Teste 3: Contar corrências de palavras repetidas") {
   std::string texto = "este teste é um exemplo de um teste";
   auto resultado = ContaPalavras(texto);
 
-  REQUIRE(resultado.size() == 6); 
+  REQUIRE(resultado.size() == 6);
   REQUIRE(resultado[1].first == "teste");
   REQUIRE(resultado[1].second == 2);
   REQUIRE(resultado[3].first == "um");
-  REQUIRE(resultado[3].second == 2);  
+  REQUIRE(resultado[3].second == 2);
 }
