@@ -14,7 +14,9 @@ cpplint:
 
 gcov: testa_conta_palavras 
 	./testa_conta_palavras
-	gcov conta_palavras.cpp testa_conta_palavras.cpp
+	gcov -o . conta_palavras.cpp | grep -A1 "File.*conta_palavras\.cpp"
+	find . -name "*.gcov" ! -name "conta_palavras.cpp.gcov" -exec rm {} +
+
 
 debug: testa_conta_palavras
 	gdb testa_conta_palavras

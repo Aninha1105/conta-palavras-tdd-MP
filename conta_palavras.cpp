@@ -5,9 +5,6 @@
  */
 
 #include "conta_palavras.hpp"
-#include <vector>
-#include <utility>
-#include <string>
 
 void separarEContar(const std::string& texto, std::vector<std::pair<std::string,int>>& palavras){
  std::string palavra_atual = "";
@@ -32,6 +29,6 @@ std::vector<std::pair<std::string, int>> ContaPalavras(const std::string& texto)
   std::vector<std::pair<std::string,int>> palavras;
 
    separarEContar(texto, palavras);
-   
+
   return palavras;
 }
