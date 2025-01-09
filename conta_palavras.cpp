@@ -15,7 +15,17 @@ std::vector<std::pair<std::string, int>>& palavras) {
   for (char c : texto) {
     if (c == ' ' || c == '\n') {
       if (!palavra_atual.empty()) {
-        palavras.push_back({palavra_atual, 1});
+        bool encontrada = false; 
+        for(auto& par : palavras) {
+          if(par.first == palavra_atual){
+            par.second++;
+            encontrada = true;
+            break;
+          }
+        }
+        if(!encontrada){
+          palavras.push_back({palavra_atual, 1});
+        }
         palavra_atual = "";
       }
     } else {
@@ -24,7 +34,17 @@ std::vector<std::pair<std::string, int>>& palavras) {
   }
 
   if (!palavra_atual.empty()) {
-    palavras.push_back({palavra_atual, 1});
+    bool encontrada = false;
+    for(auto& par : palavras){
+      if(par.first == palavra_atual){
+        par.second++;
+        encontrada = true;
+        break;
+      }
+    }
+    if(!encontrada){
+      palavras.push_back({palavra_atual, 1});
+    }
   }
 }
 
