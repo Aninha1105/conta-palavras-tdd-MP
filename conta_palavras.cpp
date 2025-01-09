@@ -9,9 +9,9 @@
 #include <utility>
 #include <string>
 
-std::string lowerCase(const std::string& texto){
+std::string lowerCase(const std::string& texto) {
   std::string lower_texto = "";
-  for(size_t i = 0; i < texto.size(); i++){
+  for (size_t i = 0; i < texto.size(); i++) {
     lower_texto += tolower(texto[i]);
   }
   return lower_texto;
