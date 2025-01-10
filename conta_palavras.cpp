@@ -56,7 +56,11 @@ std::vector<std::pair<std::string, int>>& palavras) {
   }
 }
 
-void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){}
+void mergeSort(std::vector<std::pair<std::string,int>>& string, int inicio, int fim){}
+
+void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){
+  mergeSort(palavras, 0, palavras.size()-1);
+}
 
 std::vector<std::pair<std::string, int>>
 ContaPalavras(const std::string& texto) {
