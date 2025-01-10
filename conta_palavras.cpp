@@ -56,6 +56,10 @@ std::vector<std::pair<std::string, int>>& palavras) {
   }
 }
 
+std::string removerAcento(std::string& palavra){
+  return "";
+}
+
 void merge(std::vector<std::pair<std::string, int>>& vetor,
 int inicio, int meio, int fim) {
   std::vector<std::pair<std::string, int>> temp(fim - inicio + 1);

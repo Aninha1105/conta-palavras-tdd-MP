@@ -17,6 +17,7 @@ void separarEContar(const std::string& texto,
 std::vector<std::pair<std::string, int>>& palavras);
 std::string lowerCase(const std::string& texto);
 void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras);
+std::string removerAcento(std::string& palavra);
 void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
 int inicio, int fim);
 void merge(std::vector<std::pair<std::string, int>>& vetor,
