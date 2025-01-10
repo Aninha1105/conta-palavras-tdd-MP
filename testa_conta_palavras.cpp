@@ -47,8 +47,8 @@ TEST_CASE("Teste 4: Converter todas as palavras para lowercase") {
   REQUIRE(resultado[0].second == 3);
 }
 
-TEST_CASE("Teste 5: Ordenação alfabética das palavras"){
-  std::string texto = "Este exemplo de teste serve para ordenar palavras"; 
+TEST_CASE("Teste 5: Ordenação alfabética das palavras") {
+  std::string texto = "Este exemplo de teste serve para ordenar palavras";
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 8);
