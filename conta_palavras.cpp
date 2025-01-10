@@ -56,7 +56,23 @@ std::vector<std::pair<std::string, int>>& palavras) {
   }
 }
 
-void merge(std::vector<std::pair<std::string,int>>& vetor, int inicio, int meio, int fim){}
+void merge(std::vector<std::pair<std::string,int>>& vetor, int inicio, int meio, int fim){
+  std::vector<std::pair<std::string,int>> temp(fim - inicio + 1);
+   int i = inicio, j = meio + 1, k = 0; 
+   
+   while(i <= meio && j <= fim){
+    if(vetor[i].first <= vetor[j].first){
+      temp[k++] = vetor[i++];
+    } else{
+      temp[k++] = vetor[j++];
+    }
+   }
+
+   while(i <= meio) temp[k++] = vetor[i++];
+   while(j <= fim) temp[k++] = vetor[j++];
+
+   for(k = 0; k < temp.size(); k++) vetor[inicio + k] = temp[k];
+}
 
 void mergeSort(std::vector<std::pair<std::string,int>>& vetor, int inicio, int fim){
   if(inicio < fim){
