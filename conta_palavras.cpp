@@ -56,7 +56,16 @@ std::vector<std::pair<std::string, int>>& palavras) {
   }
 }
 
-void mergeSort(std::vector<std::pair<std::string,int>>& string, int inicio, int fim){}
+void merge(std::vector<std::pair<std::string,int>>& vetor, int inicio, int meio, int fim){}
+
+void mergeSort(std::vector<std::pair<std::string,int>>& vetor, int inicio, int fim){
+  if(inicio < fim){
+    int meio = (inicio + fim) / 2;
+    mergeSort(vetor,inicio,meio);
+    mergeSort(vetor,meio + 1,fim);
+    merge(vetor,inicio,meio,fim);
+  }
+}
 
 void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){
   mergeSort(palavras, 0, palavras.size()-1);
