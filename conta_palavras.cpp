@@ -56,6 +56,8 @@ std::vector<std::pair<std::string, int>>& palavras) {
   }
 }
 
+void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){}
+
 std::vector<std::pair<std::string, int>>
 ContaPalavras(const std::string& texto) {
   std::string lower_texto = lowerCase(texto);
@@ -63,6 +65,8 @@ ContaPalavras(const std::string& texto) {
   std::vector<std::pair<std::string, int>> palavras;
 
   separarEContar(lower_texto, palavras);
+
+  ordenaPalavras(palavras);
 
   return palavras;
 }

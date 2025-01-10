@@ -22,20 +22,20 @@ TEST_CASE("Teste 2: Separação de palavras") {
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 3);
-  REQUIRE(resultado[0].first == "exemplo");
-  REQUIRE(resultado[1].first == "de");
+  REQUIRE(resultado[1].first == "exemplo");
+  REQUIRE(resultado[0].first == "de");
   REQUIRE(resultado[2].first == "texto");
 }
 
 TEST_CASE("Teste 3: Contar corrências de palavras repetidas") {
-  std::string texto = "este teste é um exemplo de um teste";
+  std::string texto = "este teste e um exemplo de um teste";
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 6);
-  REQUIRE(resultado[1].first == "teste");
-  REQUIRE(resultado[1].second == 2);
-  REQUIRE(resultado[3].first == "um");
-  REQUIRE(resultado[3].second == 2);
+  REQUIRE(resultado[4].first == "teste");
+  REQUIRE(resultado[4].second == 2);
+  REQUIRE(resultado[5].first == "um");
+  REQUIRE(resultado[5].second == 2);
 }
 
 TEST_CASE("Teste 4: Converter todas as palavras para lowercase") {
