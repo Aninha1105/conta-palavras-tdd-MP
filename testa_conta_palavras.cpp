@@ -61,3 +61,15 @@ TEST_CASE("Teste 5: Ordenação alfabética das palavras") {
   REQUIRE(resultado[6].first == "serve");
   REQUIRE(resultado[7].first == "teste");
 }
+
+TEST_CASE("Teste 6: Ordenação considerando acentos"){
+ std::string texto = "Este texto é o texto padrão";
+ auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 5);
+  REQUIRE(resultado[0].first == "é");
+  REQUIRE(resultado[1].first == "este");
+  REQUIRE(resultado[2].first == "o");
+  REQUIRE(resultado[3].first == "padrão");
+  REQUIRE(resultado[4].first == "texto");
+}
