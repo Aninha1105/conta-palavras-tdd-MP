@@ -46,3 +46,18 @@ TEST_CASE("Teste 4: Converter todas as palavras para lowercase") {
   REQUIRE(resultado[0].first == "texto");
   REQUIRE(resultado[0].second == 3);
 }
+
+TEST_CASE("Teste 5: Ordenação alfabética das palavras"){
+  std::string texto = "Este exemplo de teste serve para ordenar palavras"; 
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 8);
+  REQUIRE(resultado[0].first == "de");
+  REQUIRE(resultado[1].first == "exemplo");
+  REQUIRE(resultado[2].first == "este");
+  REQUIRE(resultado[3].first == "para");
+  REQUIRE(resultado[4].first == "palavras");
+  REQUIRE(resultado[5].first == "serve");
+  REQUIRE(resultado[6].first == "teste");
+  REQUIRE(resultado[7].first == "ordenar");
+}
