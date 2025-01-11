@@ -74,7 +74,7 @@ TEST_CASE("Teste 6: Ordenação considerando acentos") {
   REQUIRE(resultado[4].first == "texto");
 }
 
-TEST_CASE("Teste 7: Teste Final"){
+TEST_CASE("Teste 7: Teste Final") {
   std::string texto = "Este texto é o texto que será utilizado";
   auto resultado = ContaPalavras(texto);
 

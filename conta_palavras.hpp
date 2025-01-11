@@ -22,6 +22,6 @@ int inicio, int fim);
 void merge(std::vector<std::pair<std::string, int>>& vetor,
 int inicio, int meio, int fim);
 std::string removerAcento(std::string& palavra);
-void printarResultado(std::vector<std::pair<std::string,int>>& palavras);
+void printarResultado(std::vector<std::pair<std::string, int>>& palavras);
 
 #endif  // CONTA_PALAVRAS_HPP_

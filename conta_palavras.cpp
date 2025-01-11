@@ -12,8 +12,8 @@
 #include <locale>
 #include <codecvt>
 
-void printarResultado(std::vector<std::pair<std::string,int>>& palavras){
-  for(auto& par : palavras){
+void printarResultado(std::vector<std::pair<std::string, int>>& palavras) {
+  for (auto& par : palavras) {
     std::cout << par.first << ": " << par.second << std::endl;
   }
   std::cout << std::endl;
