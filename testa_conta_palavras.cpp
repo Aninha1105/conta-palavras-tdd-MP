@@ -73,3 +73,24 @@ TEST_CASE("Teste 6: Ordenação considerando acentos") {
   REQUIRE(resultado[3].first == "padrão");
   REQUIRE(resultado[4].first == "texto");
 }
+
+TEST_CASE("Teste 7: Teste Final"){
+  std::string texto = "Este texto é o texto que será utilizado";
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 7);
+  REQUIRE(resultado[0].first == "é");
+  REQUIRE(resultado[0].second == 1);
+  REQUIRE(resultado[1].first == "este");
+  REQUIRE(resultado[1].second == 1);
+  REQUIRE(resultado[2].first == "o");
+  REQUIRE(resultado[2].second == 1);
+  REQUIRE(resultado[3].first == "que");
+  REQUIRE(resultado[3].second == 1);
+  REQUIRE(resultado[4].first == "será");
+  REQUIRE(resultado[4].second == 1);
+  REQUIRE(resultado[5].first == "texto");
+  REQUIRE(resultado[5].second == 2);
+  REQUIRE(resultado[6].first == "utilizado");
+  REQUIRE(resultado[6].second == 1);
+}
