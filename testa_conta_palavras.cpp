@@ -4,11 +4,12 @@
  * \author Ana Luísa de Souza Paraguassu - 231003442
  */
 
+#include "conta_palavras.hpp"
+#include <string>
+
 #define CATCH_CONFIG_NO_POSIX_SIGNALS
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
-#include "conta_palavras.hpp"
-#include <string>
 
 TEST_CASE("Teste 1: ContaPalavras retorna vazio para texto vazio") {
     std::string texto = "";
