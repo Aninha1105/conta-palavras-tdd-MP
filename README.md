@@ -3,12 +3,12 @@ Este projeto implementa um **contador de palavras** que processa um texto, norma
 
 ## Tecnologias Utilizadas
 - **Linguagem:** C++
-- **Framework de Testes:** Catch2
+- **Framework de Testes:** [Catch2](https://github.com/catchorg/Catch2)
 - **Ferramentas de Análise:**
-  - cpplint: Para verificar o estilo de código.
-  - cppcheck: Para análise estática do código.
-  - Valgrind: Para detecção de vazamentos de memória.
-  - gcov: Para análise de cobertura de testes.
+  - `cpplint`: Para verificar o estilo de código.
+  - `cppcheck`: Para análise estática do código.
+  - `Valgrind`: Para detecção de vazamentos de memória.
+  - `gcov`: Para análise de cobertura de testes.
 
 ## Funcionalidades
 O programa executa as seguintes tarefas:
