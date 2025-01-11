@@ -8,6 +8,8 @@
 #include <vector>
 #include <utility>
 #include <string>
+#include <locale>
+#include <codecvt>
 
 std::string lowerCase(const std::string& texto) {
   std::string lower_texto = "";
@@ -57,7 +59,35 @@ std::vector<std::pair<std::string, int>>& palavras) {
 }
 
 std::string removerAcento(std::string& palavra){
-  return "";
+ std::vector<std::pair<std::string,std::string>> tabelaAcentos = {
+        {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"},
+        {"é", "e"}, {"è", "e"}, {"ê", "e"},
+        {"í", "i"}, {"ì", "i"}, {"î", "i"},
+        {"ó", "o"}, {"ò", "o"}, {"ô", "o"}, {"õ", "o"},
+        {"ú", "u"}, {"ù", "u"}, {"û", "u"},
+        {"ç", "c"}
+ };
+
+ std::string resultado;
+ std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
+
+  auto utf32Texto = converter.from_bytes(palavra);
+
+  for (char32_t c : utf32Texto) {
+    std::string utf8Char = converter.to_bytes(c);
+    bool substituido = false;
+    for (const auto& par : tabelaAcentos) {
+      if (utf8Char == par.first) {
+        resultado += par.second;
+        substituido = true;
+        break;
+      }
+    }
+    if (!substituido) {
+      resultado += utf8Char;
+    }
+  }
+ return resultado;
 }
 
 void merge(std::vector<std::pair<std::string, int>>& vetor,
@@ -66,7 +96,7 @@ int inicio, int meio, int fim) {
   int i = inicio, j = meio + 1, k = 0;
 
   while (i <= meio && j <= fim) {
-    if (vetor[i].first <= vetor[j].first) {
+    if (removerAcento(vetor[i].first) <= removerAcento(vetor[j].first)) {
       temp[k++] = vetor[i++];
     } else {
       temp[k++] = vetor[j++];
