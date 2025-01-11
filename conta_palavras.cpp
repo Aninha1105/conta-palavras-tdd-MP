@@ -147,7 +147,7 @@ void separarEContar(const std::string& texto,
 std::vector<std::pair<std::string, int>>& palavras) {
   std::string palavra_atual = "";
   for (char c : texto) {
-    if (c == ' ' || c == '\n') {
+    if (c == ' ' || c == '\n' || c == ',' || c == '.') {
       if (!palavra_atual.empty()) {
         bool encontrada = false;
         for (auto& par : palavras) {
