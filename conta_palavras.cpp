@@ -5,11 +5,14 @@
  */
 
 #include "conta_palavras.hpp"
+#include <iostream>
 #include <vector>
 #include <utility>
 #include <string>
 #include <locale>
 #include <codecvt>
+
+void printarResultado(std::vector<std::pair<std::string,int>>& palavras){}
 
 std::string removerAcento(std::string& palavra) {
   std::vector<std::pair<std::string, std::string>> tabelaAcentos = {
@@ -135,6 +138,8 @@ ContaPalavras(const std::string& texto) {
   separarEContar(lower_texto, palavras);
 
   ordenaPalavras(palavras);
+
+  printarResultado(palavras);
 
   return palavras;
 }
