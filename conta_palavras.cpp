@@ -12,7 +12,12 @@
 #include <locale>
 #include <codecvt>
 
-void printarResultado(std::vector<std::pair<std::string,int>>& palavras){}
+void printarResultado(std::vector<std::pair<std::string,int>>& palavras){
+  for(auto& par : palavras){
+    std::cout << par.first << ": " << par.second << std::endl;
+  }
+  std::cout << std::endl;
+}
 
 std::string removerAcento(std::string& palavra) {
   std::vector<std::pair<std::string, std::string>> tabelaAcentos = {
