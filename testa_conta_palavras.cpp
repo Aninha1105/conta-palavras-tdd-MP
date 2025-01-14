@@ -57,3 +57,10 @@ TEST_CASE("Teste 5: separação com pontuação e caracteres especiais") {
   REQUIRE(resultado[3].first == "texto");
   REQUIRE(resultado[4].first == "válido");
 }
+
+TEST_CASE("Teste 6: normalização das palavras para lowerCase"){
+  std::string texto = lerArquivo("teste6"); 
+  auto resultado = lowerCase(texto);
+  
+  REQUIRE(resultado == "envio para teste válido") ;
+}
