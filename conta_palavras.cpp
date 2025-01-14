@@ -106,7 +106,16 @@ std::string removerAcentos(std::string palavra) {
   return palavra_sem_acento;
 }
 
-void mergeSort(std::vector<std::pair<std::string,int>>& string, size_t inicio, size_t fim){}
+void merge(std::vector<std::pair<std::string,int>>& vetor, size_t inicio, size_t meio, size_t fim){}
+
+void mergeSort(std::vector<std::pair<std::string,int>>& vetor, size_t inicio, size_t fim){
+  if(inicio < fim){
+    int meio = (inicio + fim) / 2;
+    mergeSort(vetor,inicio,meio);
+    mergeSort(vetor,meio + 1,fim);
+    merge(vetor,inicio,meio,fim);
+  }
+}
 
 void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){
   mergeSort(palavras, 0, palavras.size()-1);
