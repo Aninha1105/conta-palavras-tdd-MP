@@ -87,7 +87,7 @@ TEST_CASE("Teste 8: ordenação alfabética das palavras") {
   REQUIRE(resultado[7].first == "teste");
 }
 
-TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas"){
+TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas") {
   std::string texto = lerArquivo("teste9");
   auto resultado = ContaPalavras(texto);
 
@@ -101,7 +101,7 @@ TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas"){
   REQUIRE(resultado[6].first == "teste");
 }
 
-TEST_CASE("Teste 10: ordenação considerando acentuação"){
+TEST_CASE("Teste 10: ordenação considerando acentuação") {
   std::string texto = lerArquivo("teste10");
   auto resultado = ContaPalavras(texto);
 
