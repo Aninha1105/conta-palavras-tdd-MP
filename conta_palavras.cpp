@@ -4,7 +4,10 @@
  * \author Ana Luísa de Souza Paraguassu - 231003442.
  */
 #include "conta_palavras.hpp"
+#include <string>
+#include <vector>
+#include <utility>
 
-std::vector<std::pair<std::string,int>> ContaPalavras(std::string texto){
+std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   return {};
 }
