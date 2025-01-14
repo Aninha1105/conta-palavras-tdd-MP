@@ -25,7 +25,8 @@ std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
   std::vector<std::pair<std::string, int>> dicionario;
   std::string palavra_atual = "";
   for (char c : texto) {
-    if (c == ' ' || c == '\n') {
+    if (c == ' ' || c == '\n' || c == '.' || c == ',' || c == ':' || c == ';' || c == '!' ||
+        c == '?' || c == '(' || c == ')' || c == '=' || c == '*' || c == '#' || c == '&') {
       if (!palavra_atual.empty()) {
         bool encontrada = false;
         for (auto& par : dicionario) {
