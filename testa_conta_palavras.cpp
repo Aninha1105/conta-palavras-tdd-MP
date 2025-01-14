@@ -33,7 +33,7 @@ TEST_CASE("Teste 3: separação de palavras") {
   REQUIRE(resultado[1].first == "utilizado");
 }
 
-TEST_CASE("Teste 4: contagem de ocorrências das palavras"){
+TEST_CASE("Teste 4: contagem de ocorrências das palavras") {
   std::string texto = lerArquivo("teste4");
   auto resultado = ContaPalavras(texto);
 
