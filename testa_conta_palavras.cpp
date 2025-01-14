@@ -100,3 +100,24 @@ TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas"){
   REQUIRE(resultado[5].first == "serve");
   REQUIRE(resultado[6].first == "teste");
 }
+
+TEST_CASE("Teste 10: ordenação considerando acentuação"){
+  std::string texto = lerArquivo("teste10");
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 7);
+  REQUIRE(resultado[0].first == "é");
+  REQUIRE(resultado[0].second == 1);
+  REQUIRE(resultado[1].first == "Este");
+  REQUIRE(resultado[1].second == 1);
+  REQUIRE(resultado[2].first == "o");
+  REQUIRE(resultado[2].second == 1);
+  REQUIRE(resultado[3].first == "que");
+  REQUIRE(resultado[3].second == 1);
+  REQUIRE(resultado[4].first == "será");
+  REQUIRE(resultado[4].second == 1);
+  REQUIRE(resultado[5].first == "texto");
+  REQUIRE(resultado[5].second == 2);
+  REQUIRE(resultado[6].first == "utilizado");
+  REQUIRE(resultado[6].second == 1);
+}
