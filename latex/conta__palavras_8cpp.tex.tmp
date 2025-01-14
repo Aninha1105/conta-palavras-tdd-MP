@@ -33,6 +33,8 @@ void \mbox{\hyperlink{conta__palavras_8cpp_abd4b7e05212aedbe08bd0ca0a12376e1}{me
 \begin{DoxyCompactList}\small\item\em Ordena um vetor de pares (palavra, contagem). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{conta__palavras_8cpp_a86789a6461e11981de104b953252554d}{ordena\+Palavras}} (std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&palavras)
 \begin{DoxyCompactList}\small\item\em Ordena o vetor de palavras e contagens. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conta__palavras_8cpp_ab1f36287d42c1266bcc4d1cfb0904874}{printa\+Resultado}} (std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ palavras)
+\begin{DoxyCompactList}\small\item\em Exibe as palavras e suas respectivas frequências no console. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \mbox{\hyperlink{conta__palavras_8cpp_a43de83b4cd7fc7c1b00783ea4d2ce534}{Conta\+Palavras}} (std\+::string texto)
 \begin{DoxyCompactList}\small\item\em Função principal que chama as auxiliares para contar e ordenar as palavras de um texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -64,7 +66,7 @@ Função principal que chama as auxiliares para contar e ordenar as palavras de 
 \begin{DoxyReturn}{Returns}
 Vetor de pares com as palavras e suas contagens.
 \end{DoxyReturn}
-Ssepara, conta as palavras e ordena, considerando case e acentuação. \Hypertarget{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681}\label{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681} 
+Separa, conta as palavras e ordena, considerando case e acentuação, e printa o resultado. \Hypertarget{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681}\label{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681} 
 \index{conta\_palavras.cpp@{conta\_palavras.cpp}!lerArquivo@{lerArquivo}}
 \index{lerArquivo@{lerArquivo}!conta\_palavras.cpp@{conta\_palavras.cpp}}
 \doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}}
@@ -164,7 +166,25 @@ Ordena o vetor de palavras e contagens.
 \begin{DoxyReturn}{Returns}
 void
 \end{DoxyReturn}
-Usa merge sort para ordenar as palavras em ordem alfabética. \Hypertarget{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a}\label{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a} 
+Usa merge sort para ordenar as palavras em ordem alfabética. \Hypertarget{conta__palavras_8cpp_ab1f36287d42c1266bcc4d1cfb0904874}\label{conta__palavras_8cpp_ab1f36287d42c1266bcc4d1cfb0904874} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!printaResultado@{printaResultado}}
+\index{printaResultado@{printaResultado}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{printaResultado()}{printaResultado()}}
+{\footnotesize\ttfamily void printa\+Resultado (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$}]{palavras }\end{DoxyParamCaption})}
+
+
+
+Exibe as palavras e suas respectivas frequências no console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em palavras} & Um vetor de pares contendo as palavras e suas frequências.\\
+\hline
+\end{DoxyParams}
+A função percorre o vetor de pares e imprime cada palavra seguida de sua frequência. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a}\label{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a} 
 \index{conta\_palavras.cpp@{conta\_palavras.cpp}!removerAcentos@{removerAcentos}}
 \index{removerAcentos@{removerAcentos}!conta\_palavras.cpp@{conta\_palavras.cpp}}
 \doxysubsubsection{\texorpdfstring{removerAcentos()}{removerAcentos()}}

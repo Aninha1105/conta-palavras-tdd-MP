@@ -120,6 +120,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a86789a6461e11981de104b953252554d" id="r_a86789a6461e11981de104b953252554d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conta__palavras_8hpp.html#a86789a6461e11981de104b953252554d">ordenaPalavras</a> (std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;palavras)</td></tr>
 <tr class="memdesc:a86789a6461e11981de104b953252554d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordena o vetor de palavras e contagens.  <br /></td></tr>
 <tr class="separator:a86789a6461e11981de104b953252554d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f36287d42c1266bcc4d1cfb0904874" id="r_ab1f36287d42c1266bcc4d1cfb0904874"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conta__palavras_8hpp.html#ab1f36287d42c1266bcc4d1cfb0904874">printaResultado</a> (std::vector&lt; std::pair&lt; std::string, int &gt; &gt; palavras)</td></tr>
+<tr class="memdesc:ab1f36287d42c1266bcc4d1cfb0904874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe as palavras e suas respectivas frequências no console.  <br /></td></tr>
+<tr class="separator:ab1f36287d42c1266bcc4d1cfb0904874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declaração das funções para o contador de palavras. </p>
@@ -156,7 +159,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vetor de pares com as palavras e suas contagens.</dd></dl>
-<p>Ssepara, conta as palavras e ordena, considerando case e acentuação. </p>
+<p>Separa, conta as palavras e ordena, considerando case e acentuação, e printa o resultado. </p>
 
 </div>
 </div>
@@ -380,6 +383,40 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 <p>Usa merge sort para ordenar as palavras em ordem alfabética. </p>
+
+</div>
+</div>
+<a id="ab1f36287d42c1266bcc4d1cfb0904874" name="ab1f36287d42c1266bcc4d1cfb0904874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f36287d42c1266bcc4d1cfb0904874">&#9670;&#160;</a></span>printaResultado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printaResultado </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; std::string, int &gt; &gt;&#160;</td>
+          <td class="paramname"><em>palavras</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe as palavras e suas respectivas frequências no console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">palavras</td><td>Um vetor de pares contendo as palavras e suas frequências. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">palavras</td><td>Um vetor de pares contendo as palavras e suas frequências.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>A função percorre o vetor de pares e imprime cada palavra seguida de sua frequência. </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
