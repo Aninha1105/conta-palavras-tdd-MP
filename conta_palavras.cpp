@@ -4,12 +4,26 @@
  * \author Ana Luísa de Souza Paraguassu - 231003442.
  */
 #include "conta_palavras.hpp"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 #include <string>
 #include <vector>
 #include <utility>
 
-std::string lerArquivo(std::string nome_do_arquivo){}
+std::string lerArquivo(std::string nome_do_arquivo){
+  std::ifstream arquivo("input/" + nome_do_arquivo);
+  if(!arquivo.is_open()){
+    throw std::runtime_error("Erro ao abrir o arquivo: " + nome_do_arquivo);
+  }
+  std::ostringstream buffer;
+  buffer << arquivo.rdbuf();
+  return buffer.str();
+}
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
-  return {};
+  std::vector<std::pair<std::string,int>> palavras;
+  std::string palavra_atual = texto;
+  if(!palavra_atual.empty()) palavras.push_back({palavra_atual,1});
+  return palavras;
 }
