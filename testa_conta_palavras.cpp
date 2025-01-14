@@ -7,3 +7,10 @@
 #define CATCH_CONFIG_NO_POSIX_SIGNALS
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
+#include "conta_palavras.hpp"
+
+TEST_CASE("Teste 1: texto vazio"){
+  std::string texto = "" ;
+  auto resultado = ContaPalavras(texto);
+  REQUIRE(resultado.size() == 0);
+}
