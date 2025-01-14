@@ -11,13 +11,24 @@
 #include <string>
 
 TEST_CASE("Teste 1: texto vazio") {
-  std::string texto = "";
+  std::string texto = lerArquivo("teste1");
   auto resultado = ContaPalavras(texto);
+
   REQUIRE(resultado.size() == 0);
 }
 
 TEST_CASE("Teste 2: leitura de arquivo") {
   std::string texto = lerArquivo("teste2");
   auto resultado = ContaPalavras(texto);
+
   REQUIRE(resultado.size() == 1);
+}
+
+TEST_CASE("Teste 3: separação de palavras"){
+  std::string texto = lerArquivo("teste3");
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 2);
+  REQUIRE(resultado[0].first == "texto");
+  REQUIRE(resultado[1].first == "utilizado");
 }
