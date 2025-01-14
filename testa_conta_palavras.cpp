@@ -24,7 +24,7 @@ TEST_CASE("Teste 2: leitura de arquivo") {
   REQUIRE(resultado.size() == 1);
 }
 
-TEST_CASE("Teste 3: separação de palavras"){
+TEST_CASE("Teste 3: separação de palavras") {
   std::string texto = lerArquivo("teste3");
   auto resultado = ContaPalavras(texto);
 
