@@ -65,7 +65,11 @@ std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
 }
 
 std::string lowerCase(std::string palavra){
-  return "";
+  std::string lower_palavra = "";
+  for(size_t i = 0; i < palavra.size(); i++){
+    lower_palavra += tolower(palavra[i]);
+  }
+  return lower_palavra;
 }
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
