@@ -45,3 +45,15 @@ TEST_CASE("Teste 4: contagem de ocorrências das palavras") {
   REQUIRE(resultado[2].first == "validado");
   REQUIRE(resultado[2].second == 1);
 }
+
+TEST_CASE("Teste 5: separação com pontuação e caracteres especiais"){
+  std::string texto = lerArquivo("teste5");
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 5);
+  REQUIRE(resultado[0].first == "abra");
+  REQUIRE(resultado[1].first == "ajuste");
+  REQUIRE(resultado[2].first == "alinhe");
+  REQUIRE(resultado[3].first == "texto");
+  REQUIRE(resultado[4].first == "válido");
+}
