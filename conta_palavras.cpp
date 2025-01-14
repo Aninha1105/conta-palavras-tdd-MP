@@ -8,6 +8,8 @@
 #include <vector>
 #include <utility>
 
+std::string lerArquivo(std::string nome_do_arquivo){}
+
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   return {};
 }

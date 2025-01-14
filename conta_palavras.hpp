@@ -11,5 +11,6 @@
 #include <utility>
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto);
+std::string lerArquivo(std::string nome_do_arquivo);
 
 #endif  // CONTA_PALAVRAS_HPP_
