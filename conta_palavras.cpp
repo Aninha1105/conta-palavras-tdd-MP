@@ -190,6 +190,8 @@ void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras) {
   mergeSort(palavras, 0, palavras.size()-1);
 }
 
+void printaResultado(std::vector<std::pair<std::string,int>> palavras){}
+
 /**
  * \brief Função principal que chama as auxiliares para contar e ordenar as palavras de um texto.
  * \param texto String contendo o texto de entrada.
