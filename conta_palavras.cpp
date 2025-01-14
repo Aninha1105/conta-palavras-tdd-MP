@@ -76,12 +76,12 @@ std::string lowerCase(std::string palavra) {
 
 std::string removerAcentos(std::string palavra) {
   std::vector<std::pair<std::string, std::string>> tabelaAcentos = {
-        {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"},
-        {"é", "e"}, {"è", "e"}, {"ê", "e"},
-        {"í", "i"}, {"ì", "i"}, {"î", "i"},
-        {"ó", "o"}, {"ò", "o"}, {"ô", "o"}, {"õ", "o"},
-        {"ú", "u"}, {"ù", "u"}, {"û", "u"},
-        {"ç", "c"}
+        {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"}, {"ä", "a"},
+        {"é", "e"}, {"è", "e"}, {"ê", "e"}, {"ë", "e"},
+        {"í", "i"}, {"ì", "i"}, {"î", "i"}, {"ï", "i"},
+        {"ó", "o"}, {"ò", "o"}, {"ô", "o"}, {"õ", "o"}, {"ö", "o"},
+        {"ú", "u"}, {"ù", "u"}, {"û", "u"}, {"ü", "u"},
+        {"ç", "c"}, {"ñ", "n"}
   };
 
   std::string palavra_sem_acento;
@@ -112,8 +112,8 @@ void merge(std::vector<std::pair<std::string, int>>& vetor,
   int i = inicio, j = meio + 1, k = 0;
 
   while (i <= meio && j <= fim) {
-    std::string a = lowerCase(vetor[i].first);
-    std::string b = lowerCase(vetor[j].first);
+    std::string a = removerAcentos(lowerCase(vetor[i].first));
+    std::string b = removerAcentos(lowerCase(vetor[j].first));
     if (a <= b) {
       temp[k++] = vetor[i++];
     } else {
