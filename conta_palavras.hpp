@@ -5,5 +5,6 @@
  */
 
 #include <string>
+#include <vector>
 
-void ContaPalavras(std::string texto);
+std::vector<std::pair<std::string,int>> ContaPalavras(std::string texto);
