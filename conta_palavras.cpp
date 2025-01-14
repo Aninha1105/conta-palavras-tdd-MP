@@ -11,9 +11,9 @@
 #include <vector>
 #include <utility>
 
-std::string lerArquivo(std::string nome_do_arquivo){
+std::string lerArquivo(std::string nome_do_arquivo) {
   std::ifstream arquivo("input/" + nome_do_arquivo);
-  if(!arquivo.is_open()){
+  if (!arquivo.is_open()) {
     throw std::runtime_error("Erro ao abrir o arquivo: " + nome_do_arquivo);
   }
   std::ostringstream buffer;
@@ -22,8 +22,8 @@ std::string lerArquivo(std::string nome_do_arquivo){
 }
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
-  std::vector<std::pair<std::string,int>> palavras;
+  std::vector<std::pair<std::string, int>> palavras;
   std::string palavra_atual = texto;
-  if(!palavra_atual.empty()) palavras.push_back({palavra_atual,1});
+  if (!palavra_atual.empty()) palavras.push_back({palavra_atual, 1});
   return palavras;
 }
