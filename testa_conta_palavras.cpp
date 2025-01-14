@@ -32,3 +32,16 @@ TEST_CASE("Teste 3: separação de palavras") {
   REQUIRE(resultado[0].first == "texto");
   REQUIRE(resultado[1].first == "utilizado");
 }
+
+TEST_CASE("Teste 4: contagem de ocorrências das palavras"){
+  std::string texto = lerArquivo("teste4");
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 3);
+  REQUIRE(resultado[0].first == "texto");
+  REQUIRE(resultado[0].second == 2);
+  REQUIRE(resultado[1].first == "utilizado");
+  REQUIRE(resultado[1].second == 1);
+  REQUIRE(resultado[2].first == "validado");
+  REQUIRE(resultado[2].second == 1);
+}
