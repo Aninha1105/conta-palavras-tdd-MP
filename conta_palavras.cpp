@@ -74,17 +74,19 @@ std::string lowerCase(std::string palavra) {
   return lower_palavra;
 }
 
-std::string removerAcentos(std::string palavra){
-  std::vector<std::pair<std::string,std::string>> tabelaAcentos = {
+std::string removerAcentos(std::string palavra) {
+  std::vector<std::pair<std::string, std::string>> tabelaAcentos = {
         {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"},
         {"é", "e"}, {"è", "e"}, {"ê", "e"},
         {"í", "i"}, {"ì", "i"}, {"î", "i"},
         {"ó", "o"}, {"ò", "o"}, {"ô", "o"}, {"õ", "o"},
         {"ú", "u"}, {"ù", "u"}, {"û", "u"},
         {"ç", "c"}
- };
- std::string palavra_sem_acento;
- std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
+  };
+
+  std::string palavra_sem_acento;
+
+  std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
   auto utf32Texto = converter.from_bytes(palavra);
   for (char32_t c : utf32Texto) {
     std::string utf8Char = converter.to_bytes(c);
@@ -100,7 +102,8 @@ std::string removerAcentos(std::string palavra){
       palavra_sem_acento += utf8Char;
     }
   }
- return palavra_sem_acento;
+
+  return palavra_sem_acento;
 }
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
