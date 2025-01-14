@@ -64,3 +64,10 @@ TEST_CASE("Teste 6: normalização das palavras para lowerCase") {
 
   REQUIRE(resultado == "envio para teste válido");
 }
+
+TEST_CASE("Teste 7: normalização das palavras com remoção de acento"){
+  std::string texto = lerArquivo("teste7");
+  auto resultado = removerAcentos(texto);
+
+  REQUIRE(resultado == "ha informacao logica no texto");
+}
