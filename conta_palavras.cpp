@@ -21,9 +21,12 @@ std::string lerArquivo(std::string nome_do_arquivo) {
   return buffer.str();
 }
 
+std::vector<std::pair<std::string,int>> separarEContar(std::string texto){
+  return {};
+}
+
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   std::vector<std::pair<std::string, int>> palavras;
-  std::string palavra_atual = texto;
-  if (!palavra_atual.empty()) palavras.push_back({palavra_atual, 1});
+  palavras = separarEContar(texto);
   return palavras;
 }
