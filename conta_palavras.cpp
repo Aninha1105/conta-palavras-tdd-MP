@@ -13,6 +13,14 @@
 #include <locale>
 #include <codecvt>
 
+/**
+ * \brief Lê o conteúdo de um arquivo e retorna como uma string.
+ * \param nome_do_arquivo Nome do arquivo a ser lido.
+ * \return Retorna o conteúdo do arquivo como uma string.
+ * \details Esta função tenta abrir o arquivo especificado:
+ * Se o arquivo não puder ser aberto, uma exceção `std::runtime_error` é lançada. 
+ * Caso contrário, o conteúdo do arquivo é lido e retornado como uma string.
+ */
 std::string lerArquivo(std::string nome_do_arquivo) {
   std::ifstream arquivo("input/" + nome_do_arquivo);
   if (!arquivo.is_open()) {
@@ -22,6 +30,14 @@ std::string lerArquivo(std::string nome_do_arquivo) {
   buffer << arquivo.rdbuf();
   return buffer.str();
 }
+
+/**
+ * \brief Separa as palavras de um texto e conta a frequência de cada uma.
+ * \param texto Texto a ser processado.
+ * \return Vetor de pares contendo palavras e suas respectivas frequências.
+ * \details A função separa as palavras do texto com base em pontuação e espaços, 
+ * contando a frequência de cada palavra e retornando um vetor com essas informações.
+ */
 
 std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
   std::vector<std::pair<std::string, int>> dicionario;
@@ -66,6 +82,12 @@ std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
   return dicionario;
 }
 
+/**
+ * \brief Converte uma string para letras minúsculas.
+ * \param palavra String a ser convertida.
+ * \return String com todas as letras em minúsculas.
+ * \details Usa a função `tolower` para converter cada caractere.
+ */
 std::string lowerCase(std::string palavra) {
   std::string lower_palavra = "";
   for (size_t i = 0; i < palavra.size(); i++) {
@@ -74,6 +96,11 @@ std::string lowerCase(std::string palavra) {
   return lower_palavra;
 }
 
+/**
+ * \brief Remove acentos de uma palavra.
+ * \param palavra String com possíveis caracteres acentuados.
+ * \return String sem caracteres acentuados.
+ */
 std::string removerAcentos(std::string palavra) {
   std::vector<std::pair<std::string, std::string>> tabelaAcentos = {
         {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"}, {"ä", "a"},
@@ -106,6 +133,15 @@ std::string removerAcentos(std::string palavra) {
   return palavra_sem_acento;
 }
 
+/**
+ * \brief Função auxiliar do merge sort para mesclar dois subvetores.
+ * \param vetor Vetor a ser ordenado.
+ * \param inicio Índice inicial do primeiro subvetor.
+ * \param meio Índice final do primeiro subvetor e início do segundo.
+ * \param fim Índice final do segundo subvetor.
+ * \return void
+ * \details Mescla dois subvetores ordenados em um único vetor ordenado.
+ */
 void merge(std::vector<std::pair<std::string, int>>& vetor,
           int inicio, int meio, int fim) {
   std::vector<std::pair<std::string, int>> temp(fim - inicio + 1);
@@ -127,6 +163,14 @@ void merge(std::vector<std::pair<std::string, int>>& vetor,
   for (k = 0; k < temp.size(); k++) vetor[inicio + k] = temp[k];
 }
 
+/**
+ * \brief Ordena um vetor de pares (palavra, contagem).
+ * \param vetor Vetor a ser ordenado.
+ * \param inicio Índice inicial do vetor.
+ * \param fim Índice final do vetor.
+ * \return void
+ * \details Divide o vetor em partes menores e usa a função merge para ordenar.
+ */
 void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
               int inicio, int fim) {
   if (inicio < fim) {
@@ -137,10 +181,22 @@ void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
   }
 }
 
+/**
+ * \brief Ordena o vetor de palavras e contagens.
+ * \param palavras Vetor contendo pares de palavras e suas contagens.
+ * \return void
+ * \details Usa merge sort para ordenar as palavras em ordem alfabética.
+ */
 void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras) {
   mergeSort(palavras, 0, palavras.size()-1);
 }
 
+/**
+ * \brief Função principal que chama as auxiliares para contar e ordenar as palavras de um texto.
+ * \param texto String contendo o texto de entrada.
+ * \return Vetor de pares com as palavras e suas contagens.
+ * \details Ssepara, conta as palavras e ordena, considerando case e acentuação.
+ */
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   std::vector<std::pair<std::string, int>> palavras;
   palavras = separarEContar(texto);
