@@ -46,7 +46,7 @@ TEST_CASE("Teste 4: contagem de ocorrências das palavras") {
   REQUIRE(resultado[2].second == 1);
 }
 
-TEST_CASE("Teste 5: separação com pontuação e caracteres especiais"){
+TEST_CASE("Teste 5: separação com pontuação e caracteres especiais") {
   std::string texto = lerArquivo("teste5");
   auto resultado = ContaPalavras(texto);
 
