@@ -11,7 +11,7 @@
 #include <utility>
 
 /**
- * \brief Função principal que conta as palavras em um texto.
+ * \brief Função principal que chama as auxiliares para contar e ordenar as palavras de um texto.
  * \param texto String contendo o texto de entrada.
  * \return Vetor de pares com as palavras e suas contagens.
  */
@@ -25,15 +25,15 @@ std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto);
 std::string lerArquivo(std::string nome_do_arquivo);
 
 /**
- * \brief Separa as palavras de uma string e conta suas ocorrências.
- * \param texto String de entrada contendo o texto.
- * \return Vetor com pares no formato (palavra, frequência).
+ * \brief Separa as palavras de um texto e conta a frequência de cada uma.
+ * \param texto Texto a ser processado.
+ * \return Vetor de pares contendo palavras e suas respectivas frequências.
  */
 std::vector<std::pair<std::string, int>> separarEContar(std::string texto);
 
 /**
  * \brief Converte uma string para letras minúsculas.
- * \param texto String a ser convertida.
+ * \param palavra String a ser convertida.
  * \return String com todas as letras em minúsculas.
  */
 std::string lowerCase(std::string palavra);
@@ -57,7 +57,7 @@ void merge(std::vector<std::pair<std::string, int>>& vetor,
            int inicio, int meio, int fim);
 
 /**
- * \brief Ordena um vetor de pares (palavra, frequência).
+ * \brief Ordena um vetor de pares (palavra, contagem).
  * \param vetor Vetor a ser ordenado.
  * \param inicio Índice inicial do vetor.
  * \param fim Índice final do vetor.
@@ -67,8 +67,8 @@ void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
                int inicio, int fim);
 
 /**
- * \brief Ordena o vetor de palavras e frequências.
- * \param palavras Vetor contendo pares de palavras e suas frequências.
+ * \brief Ordena o vetor de palavras e contagens.
+ * \param palavras Vetor contendo pares de palavras e suas contagens.
  * \return void
  */
 void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras);

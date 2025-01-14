@@ -1,0 +1,203 @@
+\doxysection{conta\+\_\+palavras.\+cpp File Reference}
+\hypertarget{conta__palavras_8cpp}{}\label{conta__palavras_8cpp}\index{conta\_palavras.cpp@{conta\_palavras.cpp}}
+
+
+Implementação das funções para contagem e ordenação das palavras do texto.  
+
+
+{\ttfamily \#include "{}conta\+\_\+palavras.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include $<$codecvt$>$}\newline
+Include dependency graph for conta\+\_\+palavras.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681}{ler\+Arquivo}} (std\+::string nome\+\_\+do\+\_\+arquivo)
+\begin{DoxyCompactList}\small\item\em Lê o conteúdo de um arquivo e retorna como uma string. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \mbox{\hyperlink{conta__palavras_8cpp_aedb69e45ff2eb6a6159ca98717152bfe}{separar\+EContar}} (std\+::string texto)
+\begin{DoxyCompactList}\small\item\em Separa as palavras de um texto e conta a frequência de cada uma. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{conta__palavras_8cpp_a4edba0204b6e112eef275017ddb5e0c9}{lower\+Case}} (std\+::string palavra)
+\begin{DoxyCompactList}\small\item\em Converte uma string para letras minúsculas. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a}{remover\+Acentos}} (std\+::string palavra)
+\begin{DoxyCompactList}\small\item\em Remove acentos de uma palavra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conta__palavras_8cpp_aba538741023b0afd8f7b4c27b46b8294}{merge}} (std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&vetor, int inicio, int meio, int fim)
+\begin{DoxyCompactList}\small\item\em Função auxiliar do merge sort para mesclar dois subvetores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conta__palavras_8cpp_abd4b7e05212aedbe08bd0ca0a12376e1}{merge\+Sort}} (std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&vetor, int inicio, int fim)
+\begin{DoxyCompactList}\small\item\em Ordena um vetor de pares (palavra, contagem). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{conta__palavras_8cpp_a86789a6461e11981de104b953252554d}{ordena\+Palavras}} (std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&palavras)
+\begin{DoxyCompactList}\small\item\em Ordena o vetor de palavras e contagens. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \mbox{\hyperlink{conta__palavras_8cpp_a43de83b4cd7fc7c1b00783ea4d2ce534}{Conta\+Palavras}} (std\+::string texto)
+\begin{DoxyCompactList}\small\item\em Função principal que chama as auxiliares para contar e ordenar as palavras de um texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções para contagem e ordenação das palavras do texto. 
+
+\begin{DoxyAuthor}{Author}
+Ana Luísa de Souza Paraguassu -\/ 231003442. 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{conta__palavras_8cpp_a43de83b4cd7fc7c1b00783ea4d2ce534}\label{conta__palavras_8cpp_a43de83b4cd7fc7c1b00783ea4d2ce534} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!ContaPalavras@{ContaPalavras}}
+\index{ContaPalavras@{ContaPalavras}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{ContaPalavras()}{ContaPalavras()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ Conta\+Palavras (\begin{DoxyParamCaption}\item[{std\+::string}]{texto }\end{DoxyParamCaption})}
+
+
+
+Função principal que chama as auxiliares para contar e ordenar as palavras de um texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & String contendo o texto de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vetor de pares com as palavras e suas contagens.
+\end{DoxyReturn}
+Ssepara, conta as palavras e ordena, considerando case e acentuação. \Hypertarget{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681}\label{conta__palavras_8cpp_a3a9721773397c33182f50e53723f5681} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!lerArquivo@{lerArquivo}}
+\index{lerArquivo@{lerArquivo}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}}
+{\footnotesize\ttfamily std\+::string ler\+Arquivo (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+\_\+do\+\_\+arquivo }\end{DoxyParamCaption})}
+
+
+
+Lê o conteúdo de um arquivo e retorna como uma string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+do\+\_\+arquivo} & Nome do arquivo a ser lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o conteúdo do arquivo como uma string.
+\end{DoxyReturn}
+Esta função tenta abrir o arquivo especificado\+: Se o arquivo não puder ser aberto, uma exceção {\ttfamily std\+::runtime\+\_\+error} é lançada. Caso contrário, o conteúdo do arquivo é lido e retornado como uma string. \Hypertarget{conta__palavras_8cpp_a4edba0204b6e112eef275017ddb5e0c9}\label{conta__palavras_8cpp_a4edba0204b6e112eef275017ddb5e0c9} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!lowerCase@{lowerCase}}
+\index{lowerCase@{lowerCase}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{lowerCase()}{lowerCase()}}
+{\footnotesize\ttfamily std\+::string lower\+Case (\begin{DoxyParamCaption}\item[{std\+::string}]{palavra }\end{DoxyParamCaption})}
+
+
+
+Converte uma string para letras minúsculas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em palavra} & String a ser convertida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String com todas as letras em minúsculas.
+\end{DoxyReturn}
+Usa a função {\ttfamily tolower} para converter cada caractere. \Hypertarget{conta__palavras_8cpp_aba538741023b0afd8f7b4c27b46b8294}\label{conta__palavras_8cpp_aba538741023b0afd8f7b4c27b46b8294} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!merge@{merge}}
+\index{merge@{merge}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily void merge (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{vetor,  }\item[{int}]{inicio,  }\item[{int}]{meio,  }\item[{int}]{fim }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar do merge sort para mesclar dois subvetores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vetor} & Vetor a ser ordenado. \\
+\hline
+{\em inicio} & Índice inicial do primeiro subvetor. \\
+\hline
+{\em meio} & Índice final do primeiro subvetor e início do segundo. \\
+\hline
+{\em fim} & Índice final do segundo subvetor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Mescla dois subvetores ordenados em um único vetor ordenado. \Hypertarget{conta__palavras_8cpp_abd4b7e05212aedbe08bd0ca0a12376e1}\label{conta__palavras_8cpp_abd4b7e05212aedbe08bd0ca0a12376e1} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!mergeSort@{mergeSort}}
+\index{mergeSort@{mergeSort}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{mergeSort()}{mergeSort()}}
+{\footnotesize\ttfamily void merge\+Sort (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{vetor,  }\item[{int}]{inicio,  }\item[{int}]{fim }\end{DoxyParamCaption})}
+
+
+
+Ordena um vetor de pares (palavra, contagem). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vetor} & Vetor a ser ordenado. \\
+\hline
+{\em inicio} & Índice inicial do vetor. \\
+\hline
+{\em fim} & Índice final do vetor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Divide o vetor em partes menores e usa a função merge para ordenar. \Hypertarget{conta__palavras_8cpp_a86789a6461e11981de104b953252554d}\label{conta__palavras_8cpp_a86789a6461e11981de104b953252554d} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!ordenaPalavras@{ordenaPalavras}}
+\index{ordenaPalavras@{ordenaPalavras}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{ordenaPalavras()}{ordenaPalavras()}}
+{\footnotesize\ttfamily void ordena\+Palavras (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{palavras }\end{DoxyParamCaption})}
+
+
+
+Ordena o vetor de palavras e contagens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em palavras} & Vetor contendo pares de palavras e suas contagens. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Usa merge sort para ordenar as palavras em ordem alfabética. \Hypertarget{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a}\label{conta__palavras_8cpp_a79bb3d543bdd54c59d1c7c6281a8754a} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!removerAcentos@{removerAcentos}}
+\index{removerAcentos@{removerAcentos}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{removerAcentos()}{removerAcentos()}}
+{\footnotesize\ttfamily std\+::string remover\+Acentos (\begin{DoxyParamCaption}\item[{std\+::string}]{palavra }\end{DoxyParamCaption})}
+
+
+
+Remove acentos de uma palavra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em palavra} & String com possíveis caracteres acentuados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String sem caracteres acentuados. 
+\end{DoxyReturn}
+\Hypertarget{conta__palavras_8cpp_aedb69e45ff2eb6a6159ca98717152bfe}\label{conta__palavras_8cpp_aedb69e45ff2eb6a6159ca98717152bfe} 
+\index{conta\_palavras.cpp@{conta\_palavras.cpp}!separarEContar@{separarEContar}}
+\index{separarEContar@{separarEContar}!conta\_palavras.cpp@{conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{separarEContar()}{separarEContar()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ separar\+EContar (\begin{DoxyParamCaption}\item[{std\+::string}]{texto }\end{DoxyParamCaption})}
+
+
+
+Separa as palavras de um texto e conta a frequência de cada uma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texto} & Texto a ser processado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vetor de pares contendo palavras e suas respectivas frequências.
+\end{DoxyReturn}
+A função separa as palavras do texto com base em pontuação e espaços, contando a frequência de cada palavra e retornando um vetor com essas informações. 

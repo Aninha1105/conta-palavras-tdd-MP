@@ -38,7 +38,6 @@ std::string lerArquivo(std::string nome_do_arquivo) {
  * \details A função separa as palavras do texto com base em pontuação e espaços, 
  * contando a frequência de cada palavra e retornando um vetor com essas informações.
  */
-
 std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
   std::vector<std::pair<std::string, int>> dicionario;
   std::string palavra_atual = "";
