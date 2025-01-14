@@ -64,9 +64,9 @@ std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
   return dicionario;
 }
 
-std::string lowerCase(std::string palavra){
+std::string lowerCase(std::string palavra) {
   std::string lower_palavra = "";
-  for(size_t i = 0; i < palavra.size(); i++){
+  for (size_t i = 0; i < palavra.size(); i++) {
     lower_palavra += tolower(palavra[i]);
   }
   return lower_palavra;
