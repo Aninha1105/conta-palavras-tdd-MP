@@ -112,7 +112,9 @@ void merge(std::vector<std::pair<std::string, int>>& vetor,
   int i = inicio, j = meio + 1, k = 0;
 
   while (i <= meio && j <= fim) {
-    if (vetor[i].first <= vetor[j].first) {
+    std::string a = lowerCase(vetor[i].first);
+    std::string b = lowerCase(vetor[j].first);
+    if (a <= b) {
       temp[k++] = vetor[i++];
     } else {
       temp[k++] = vetor[j++];
