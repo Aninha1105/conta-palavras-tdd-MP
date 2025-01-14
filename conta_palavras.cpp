@@ -106,6 +106,8 @@ std::string removerAcentos(std::string palavra) {
   return palavra_sem_acento;
 }
 
+void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){}
+
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   std::vector<std::pair<std::string, int>> palavras;
   palavras = separarEContar(texto);

@@ -79,7 +79,7 @@ TEST_CASE("Teste 8: ordenação alfabética das palavras"){
   REQUIRE(resultado.size() == 8);
   REQUIRE(resultado[0].first == "de");
   REQUIRE(resultado[1].first == "exemplo");
-  REQUIRE(resultado[2].first == "este");
+  REQUIRE(resultado[2].first == "Este");
   REQUIRE(resultado[3].first == "para");
   REQUIRE(resultado[4].first == "palavras");
   REQUIRE(resultado[5].first == "serve");
