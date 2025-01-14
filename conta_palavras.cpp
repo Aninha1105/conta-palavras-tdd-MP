@@ -22,7 +22,25 @@ std::string lerArquivo(std::string nome_do_arquivo) {
 }
 
 std::vector<std::pair<std::string,int>> separarEContar(std::string texto){
-  return {};
+  std::vector<std::pair<std::string,int>> dicionario;
+  std::string palavra_atual = "";
+
+  for(char c : texto){
+  if(c == ' ' || c == '\n'){
+    if(!palavra_atual.empty()){
+      dicionario.push_back({palavra_atual,1}); 
+      palavra_atual = "" ;
+    }
+  } else{
+    palavra_atual+=c;
+  }
+ }
+
+ if(!palavra_atual.empty()){
+  dicionario.push_back({palavra_atual,1});
+ }
+ 
+ return dicionario;
 }
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
