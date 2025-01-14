@@ -10,6 +10,8 @@
 #include <string>
 #include <vector>
 #include <utility>
+#include <locale>
+#include <codecvt>
 
 std::string lerArquivo(std::string nome_do_arquivo) {
   std::ifstream arquivo("input/" + nome_do_arquivo);
@@ -73,7 +75,32 @@ std::string lowerCase(std::string palavra) {
 }
 
 std::string removerAcentos(std::string palavra){
-  return "";
+  std::vector<std::pair<std::string,std::string>> tabelaAcentos = {
+        {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"},
+        {"é", "e"}, {"è", "e"}, {"ê", "e"},
+        {"í", "i"}, {"ì", "i"}, {"î", "i"},
+        {"ó", "o"}, {"ò", "o"}, {"ô", "o"}, {"õ", "o"},
+        {"ú", "u"}, {"ù", "u"}, {"û", "u"},
+        {"ç", "c"}
+ };
+ std::string palavra_sem_acento;
+ std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
+  auto utf32Texto = converter.from_bytes(palavra);
+  for (char32_t c : utf32Texto) {
+    std::string utf8Char = converter.to_bytes(c);
+    bool substituido = false;
+    for (const auto& par : tabelaAcentos) {
+      if (utf8Char == par.first) {
+        palavra_sem_acento += par.second;
+        substituido = true;
+        break;
+      }
+    }
+    if (!substituido) {
+      palavra_sem_acento += utf8Char;
+    }
+  }
+ return palavra_sem_acento;
 }
 
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
