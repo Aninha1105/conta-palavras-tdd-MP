@@ -72,6 +72,10 @@ std::string lowerCase(std::string palavra) {
   return lower_palavra;
 }
 
+std::string removerAcentos(std::string palavra){
+  return "";
+}
+
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   std::vector<std::pair<std::string, int>> palavras;
   palavras = separarEContar(texto);
