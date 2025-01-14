@@ -64,6 +64,10 @@ std::vector<std::pair<std::string, int>> separarEContar(std::string texto) {
   return dicionario;
 }
 
+std::string lowerCase(std::string palavra){
+  return "";
+}
+
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   std::vector<std::pair<std::string, int>> palavras;
   palavras = separarEContar(texto);
