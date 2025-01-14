@@ -73,6 +73,11 @@ void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
  */
 void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras);
 
-void printaResultado(std::vector<std::pair<std::string,int>> palavras);
+/**
+ * \brief Exibe as palavras e suas respectivas frequências no console.
+ * \param palavras Um vetor de pares contendo as palavras e suas frequências.
+ * \return void
+ */
+void printaResultado(std::vector<std::pair<std::string, int>> palavras);
 
 #endif  // CONTA_PALAVRAS_HPP_

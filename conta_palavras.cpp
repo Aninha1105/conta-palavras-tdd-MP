@@ -190,17 +190,29 @@ void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras) {
   mergeSort(palavras, 0, palavras.size()-1);
 }
 
-void printaResultado(std::vector<std::pair<std::string,int>> palavras){}
+/**
+ * \brief Exibe as palavras e suas respectivas frequências no console.
+ * \param palavras Um vetor de pares contendo as palavras e suas frequências.
+ * \details A função percorre o vetor de pares e imprime cada palavra seguida de sua frequência.
+ * \return void
+ */
+void printaResultado(std::vector<std::pair<std::string, int>> palavras) {
+  for (auto par : palavras) {
+    std::cout << par.first << ": " << par.second << std::endl;
+  }
+  std::cout << std::endl;
+}
 
 /**
  * \brief Função principal que chama as auxiliares para contar e ordenar as palavras de um texto.
  * \param texto String contendo o texto de entrada.
  * \return Vetor de pares com as palavras e suas contagens.
- * \details Ssepara, conta as palavras e ordena, considerando case e acentuação.
+ * \details Separa, conta as palavras e ordena, considerando case e acentuação, e printa o resultado.
  */
 std::vector<std::pair<std::string, int>> ContaPalavras(std::string texto) {
   std::vector<std::pair<std::string, int>> palavras;
   palavras = separarEContar(texto);
   ordenaPalavras(palavras);
+  printaResultado(palavras);
   return palavras;
 }
