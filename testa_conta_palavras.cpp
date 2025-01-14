@@ -72,8 +72,8 @@ TEST_CASE("Teste 7: normalização das palavras com remoção de acento") {
   REQUIRE(resultado == "ha informacao logica no texto");
 }
 
-TEST_CASE("Teste 8: ordenação alfabética das palavras"){
- std::string texto = lerArquivo("teste8"); 
+TEST_CASE("Teste 8: ordenação alfabética das palavras") {
+  std::string texto = lerArquivo("teste8");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 8);

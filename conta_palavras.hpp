@@ -15,8 +15,10 @@ std::string lerArquivo(std::string nome_do_arquivo);
 std::vector<std::pair<std::string, int>> separarEContar(std::string texto);
 std::string lowerCase(std::string palavra);
 std::string removerAcentos(std::string palavra);
-void merge(std::vector<std::pair<std::string,int>>& vetor, int inicio, int meio, int fim);
-void mergeSort(std::vector<std::pair<std::string,int>>& vetor, int inicio, int fim);
-void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras);
+void merge(std::vector<std::pair<std::string, int>>& vetor,
+           int inicio, int meio, int fim);
+void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
+               int inicio, int fim);
+void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras);
 
 #endif  // CONTA_PALAVRAS_HPP_

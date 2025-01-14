@@ -106,34 +106,36 @@ std::string removerAcentos(std::string palavra) {
   return palavra_sem_acento;
 }
 
-void merge(std::vector<std::pair<std::string,int>>& vetor, int inicio, int meio, int fim){
-  std::vector<std::pair<std::string,int>> temp(fim - inicio + 1);
-  int i = inicio, j = meio + 1, k = 0; 
-   
-  while(i <= meio && j <= fim){
-    if(vetor[i].first <= vetor[j].first){
+void merge(std::vector<std::pair<std::string, int>>& vetor,
+          int inicio, int meio, int fim) {
+  std::vector<std::pair<std::string, int>> temp(fim - inicio + 1);
+  int i = inicio, j = meio + 1, k = 0;
+
+  while (i <= meio && j <= fim) {
+    if (vetor[i].first <= vetor[j].first) {
       temp[k++] = vetor[i++];
-    } else{
+    } else {
       temp[k++] = vetor[j++];
     }
   }
 
-  while(i <= meio) temp[k++] = vetor[i++];
-  while(j <= fim) temp[k++] = vetor[j++];
+  while (i <= meio) temp[k++] = vetor[i++];
+  while (j <= fim) temp[k++] = vetor[j++];
 
-  for(k = 0; k < temp.size(); k++) vetor[inicio + k] = temp[k];
+  for (k = 0; k < temp.size(); k++) vetor[inicio + k] = temp[k];
 }
 
-void mergeSort(std::vector<std::pair<std::string,int>>& vetor, int inicio, int fim){
-  if(inicio < fim){
+void mergeSort(std::vector<std::pair<std::string, int>>& vetor,
+              int inicio, int fim) {
+  if (inicio < fim) {
     int meio = (inicio + fim) / 2;
-    mergeSort(vetor,inicio,meio);
-    mergeSort(vetor,meio + 1,fim);
-    merge(vetor,inicio,meio,fim);
+    mergeSort(vetor, inicio, meio);
+    mergeSort(vetor, meio + 1, fim);
+    merge(vetor, inicio, meio, fim);
   }
 }
 
-void ordenaPalavras(std::vector<std::pair<std::string,int>>& palavras){
+void ordenaPalavras(std::vector<std::pair<std::string, int>>& palavras) {
   mergeSort(palavras, 0, palavras.size()-1);
 }
 
