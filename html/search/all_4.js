@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e_20executar_20o_20projeto_0',['2. Compilar e Executar o Projeto',['../index.html#autotoc_md5',1,'']]],
-  ['executar_1',['Como Executar',['../index.html#autotoc_md3',1,'']]],
-  ['executar_20o_20projeto_2',['2. Compilar e Executar o Projeto',['../index.html#autotoc_md5',1,'']]]
+  ['de_20cobertura_20do_20código_0',['3. Testar percentual de cobertura do código',['../index.html#autotoc_md6',1,'']]],
+  ['de_20palavras_1',['Contador de Palavras',['../index.html',1,'']]],
+  ['do_20código_2',['3. Testar percentual de cobertura do código',['../index.html#autotoc_md6',1,'']]]
 ];

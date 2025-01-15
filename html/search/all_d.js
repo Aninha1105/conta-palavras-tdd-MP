@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tecnologias_20utilizadas_0',['Tecnologias Utilizadas',['../index.html#autotoc_md1',1,'']]],
-  ['testa_5fconta_5fpalavras_2ecpp_1',['testa_conta_palavras.cpp',['../testa__conta__palavras_8cpp.html',1,'']]]
+  ['separarecontar_0',['separarecontar',['../conta__palavras_8cpp.html#aedb69e45ff2eb6a6159ca98717152bfe',1,'separarEContar(std::string texto):&#160;conta_palavras.cpp'],['../conta__palavras_8hpp.html#aedb69e45ff2eb6a6159ca98717152bfe',1,'separarEContar(std::string texto):&#160;conta_palavras.cpp']]]
 ];

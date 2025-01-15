@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['o_20github_0',['Link para o GitHub',['../index.html#autotoc_md7',1,'']]],
-  ['o_20projeto_1',['2. Compilar e Executar o Projeto',['../index.html#autotoc_md5',1,'']]],
-  ['o_20repositório_2',['1. Clonar o Repositório',['../index.html#autotoc_md4',1,'']]],
-  ['ordenapalavras_3',['ordenapalavras',['../conta__palavras_8cpp.html#a86789a6461e11981de104b953252554d',1,'ordenaPalavras(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;palavras):&#160;conta_palavras.cpp'],['../conta__palavras_8hpp.html#a86789a6461e11981de104b953252554d',1,'ordenaPalavras(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;palavras):&#160;conta_palavras.cpp']]]
+  ['merge_0',['merge',['../conta__palavras_8cpp.html#aba538741023b0afd8f7b4c27b46b8294',1,'merge(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;vetor, int inicio, int meio, int fim):&#160;conta_palavras.cpp'],['../conta__palavras_8hpp.html#aba538741023b0afd8f7b4c27b46b8294',1,'merge(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;vetor, int inicio, int meio, int fim):&#160;conta_palavras.cpp']]],
+  ['mergesort_1',['mergesort',['../conta__palavras_8cpp.html#abd4b7e05212aedbe08bd0ca0a12376e1',1,'mergeSort(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;vetor, int inicio, int fim):&#160;conta_palavras.cpp'],['../conta__palavras_8hpp.html#abd4b7e05212aedbe08bd0ca0a12376e1',1,'mergeSort(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;vetor, int inicio, int fim):&#160;conta_palavras.cpp']]]
 ];

@@ -1,5 +1,5 @@
 # Contador de Palavras
-Este projeto implementa um **contador de palavras** que processa um texto, normaliza as palavras (transformando-as em letras minúsculas e removendo acentos) e as organiza em ordem alfabética. Ele também conta a frequência de cada palavra no texto de entrada, utilizando a abordagem de **Desenvolvimento Orientado a Testes (TDD)**.
+Este projeto implementa um **contador de palavras** que processa um texto, normaliza as palavras (transformando-as em letras minúsculas e removendo acentos) para organiza em ordem alfabética, além de contar a frequência de cada palavra no texto de entrada, utilizando a abordagem de **Desenvolvimento Orientado a Testes (TDD)**.
 
 ## Tecnologias Utilizadas
 - **Linguagem:** C++
@@ -29,6 +29,11 @@ cd conta-palavras-tdd-MP
 ```bash
 make
 ```
+### 3. Testar percentual de cobertura do código
+```bash
+make gcov
+```
+
 ## Conclusão
 Este projeto demonstra a aplicação de TDD para construir um contador de palavras eficiente e confiável. A integração de boas práticas de programação e ferramentas de análise garante que o código seja fácil de manter e proporciona maior confiança no desenvolvimento das funcionalidades.
 
